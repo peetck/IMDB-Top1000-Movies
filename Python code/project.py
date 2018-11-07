@@ -21,7 +21,7 @@ def graph1(data):
     for i in sorted(dic_of_totalmoviesales):
         listed.append(dic_of_totalmoviesales[i])
     graph = pygal.Line()
-    graph.title = "Graph of Movie revenue in each years (million) (US dollars)"
+    graph.title = "กราฟอัตรารายได้การขายภาพยนต์ ทั้งหมด 1000 เรื่อง ในช่วงปี 2006 - 2016 (Million US dollars)"
     graph.x_labels = map(str, range(2006, 2017))
     graph.add("Revenue", listed)
     graph.render_to_file("Graph of total movies sales in each year.svg")
