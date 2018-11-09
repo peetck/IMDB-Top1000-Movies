@@ -7,7 +7,8 @@ def genre_graph(data):
     dic = {}
     for i in genre:
         check = i.split(",")
-        genre_2.append(check[0])
+        for i in check:
+            genre_2.append(i)
     for i in genre_2:
         if i not in dic:
             dic[i] = 1

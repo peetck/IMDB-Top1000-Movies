@@ -8,20 +8,23 @@ def genre_price(data):
     genre_reduce = []
     for i in genre:
         check = i.split(",")
-        genre_reduce.append(check[0])
+        for i in check:
+            genre_reduce.append(i)
+            year.append(year[genre_reduce.index(i)])
+            revenue.append(revenue[genre_reduce.index(i)])
     dic_2006, dic_2007, dic_2008, dic_2009, dic_2010\
     , dic_2011, dic_2012, dic_2013, dic_2014, dic_2015\
-    , dic_2016 = {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0}, \
-    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0}, \
-    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0}, \
-    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0}, \
-    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0}, \
-    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0}, \
-    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0}\
-    , {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0}, \
-    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0}, \
-    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0}, \
-    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0}
+    , dic_2016 = {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
+    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
+    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
+    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
+    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
+    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
+    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}\
+    , {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
+    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
+    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
+    {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}
     count = 0
     for i in genre_reduce:
         if year[count] == 2006:
