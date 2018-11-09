@@ -9,16 +9,20 @@ def genre_graph(data):
         check = i.split(",")
         for i in check:
             genre_2.append(i)
+    dic2 = {}
     for i in genre_2:
         if i not in dic:
             dic[i] = 1
         else:
             dic[i] += 1
-    create_graph(dic)
-def create_graph(dic):
-    graph = pygal.Pie()
-    graph.title = "ประเภทของหนังที่ได้รับความนิยม ตั้งแต่ปี 2006 - 2016 (1000 เรื่อง)"
     for i in dic:
-        graph.add(i, dic[i])
+        dic2[dic[i]] = i
+    create_graph(dic, dic2)
+def create_graph(dic, dic2):
+    graph = pygal.Bar()
+    graph.title = "ประเภทของหนังที่ได้รับความนิยม ตั้งแต่ปี 2006 - 2016 (1000 เรื่อง)"
+    value = []
+    for i in sorted(dic.values())[::-1]:
+        graph.add(dic2[i], i)
     graph.render_to_file("../Graph/genre_graph.svg")
 genre_graph(data)
