@@ -51,16 +51,17 @@ def genre_price(data):
         else:
             state[i] += revenue[count]
         count += 1
-    create_graph(dic_2006, dic_2007, dic_2008, dic_2009, dic_2010\
+    create_graph_genre_price_each_years(dic_2006, dic_2007, dic_2008, dic_2009, dic_2010\
     , dic_2011, dic_2012, dic_2013, dic_2014, dic_2015\
     , dic_2016)
-def create_graph(dic_2006, dic_2007, dic_2008, dic_2009, dic_2010\
+
+def create_graph_genre_price_each_years(dic_2006, dic_2007, dic_2008, dic_2009, dic_2010\
     , dic_2011, dic_2012, dic_2013, dic_2014, dic_2015\
     , dic_2016):
-    graph = pygal.StackedBar()
-    graph.title = "รายได้จากการขายหนังแต่ละประเภทในแต่ละปี (2006 - 2016) #US-Dollars"
+    graph = pygal.Line()
+    graph.title = "รายได้จากการขายหนังแต่ละประเภท (2006 - 2016) #US-Dollars"
     graph.x_labels = map(str, range(2006, 2017))
-    graph.add("Animation", [dic_2006["Action"], dic_2007["Action"], dic_2008["Action"], dic_2009["Action"], dic_2010["Action"], dic_2011["Action"], dic_2012["Action"]\
+    graph.add("Action", [dic_2006["Action"], dic_2007["Action"], dic_2008["Action"], dic_2009["Action"], dic_2010["Action"], dic_2011["Action"], dic_2012["Action"]\
         , dic_2013["Action"], dic_2014["Action"], dic_2015["Action"], dic_2016["Action"]])
     graph.add("Adventure", [dic_2006["Adventure"], dic_2007["Adventure"], dic_2008["Adventure"], dic_2009["Adventure"], dic_2010["Adventure"], dic_2011["Adventure"], dic_2012["Adventure"]\
         , dic_2013["Adventure"], dic_2014["Adventure"], dic_2015["Adventure"], dic_2016["Adventure"]])
