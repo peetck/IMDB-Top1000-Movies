@@ -20,7 +20,7 @@ def genre_graph(data):
     create_graph(dic, dic2)
 def create_graph(dic, dic2):
     graph = pygal.Bar()
-    graph.title = "ประเภทของหนังที่ได้รับความนิยม ตั้งแต่ปี 2006 - 2016 (1000 เรื่อง)"
+    graph.title = "ประเภทของหนัง ตั้งแต่ปี 2006 - 2016"
     value = []
     for i in sorted(dic.values())[::-1]:
         graph.add(dic2[i], i)
