@@ -10,3 +10,6 @@ Data from : https://www.kaggle.com/PromptCloudHQ/imdb-data/data
  * 61070006 นาย กฤษฎาภา ง่วนจร
  * 61070199 นาย วรภัทร ภัทรเมธาวรกุล
  * 61070221 นาย ศิรวิทย์ ยอดจิตร
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
