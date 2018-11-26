@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+""" generate wordcloud """
 from os import path
 from PIL import Image
 import numpy as np
