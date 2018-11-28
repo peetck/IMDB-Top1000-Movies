@@ -13,8 +13,8 @@ def word(data):
     text = ""
     for i in description:
         text += i
-    wine = np.array(Image.open(path.join("../Picture/wine.png")))
-    wordcloud = WordCloud(max_font_size=60, mask=wine,background_color="white").generate(text)
+    popcorn = np.array(Image.open(path.join("../Picture/popcorn.png")))
+    wordcloud = WordCloud(max_font_size=60, mask=popcorn,background_color="white").generate(text)
     plt.figure()
     plt.imshow(wordcloud, interpolation="bilinear")
     plt.axis("off")
@@ -29,15 +29,15 @@ def word(data):
         else:
             text_less50 += description[i]
 
-    wine = np.array(Image.open(path.join("../Picture/wine.png")))
-    wordcloud = WordCloud(max_font_size=60, mask=wine,background_color="white").generate(text_more50)
+    popcorn = np.array(Image.open(path.join("../Picture/popcorn.png")))
+    wordcloud = WordCloud(max_font_size=60, mask=popcorn,background_color="white").generate(text_more50)
     plt.figure()
     plt.imshow(wordcloud, interpolation="bilinear")
     plt.axis("off")
     wordcloud.to_file("../Wordcloud/more50.png")
 
-    wine = np.array(Image.open(path.join("../Picture/wine.png")))
-    wordcloud = WordCloud(max_font_size=60, mask=wine,background_color="white").generate(text_less50)
+    popcorn = np.array(Image.open(path.join("../Picture/popcorn.png")))
+    wordcloud = WordCloud(max_font_size=60, mask=popcorn,background_color="white").generate(text_less50)
     plt.figure()
     plt.imshow(wordcloud, interpolation="bilinear")
     plt.axis("off")
