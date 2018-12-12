@@ -1,0 +1,158 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css?family=Athiti:200,300,400,500,600,700&subset=thai');
+
+body {
+    font-family: 'Athiti', sans-serif;
+}
+
+#heading {
+    background: url('../images/heading.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+#heading h1 {
+    font-size: 5em;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+#heading p {
+    font-size: 2em;
+    font-weight: 300;
+}
+
+#dataset {
+    background: url('../images/dataset.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+#dataset h1 {
+    font-size: 5em;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+#dataset h2 {
+    font-size: 4em;
+    font-weight: 500;
+}
+
+#dataset h3 {
+    font-size: 3em;
+    font-weight: 500;
+}
+
+#dataset h2 a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#dataset h2 a:hover {
+    color: #ee0;
+    text-decoration: underline;
+}
+
+#chart-title {
+    background-color: #383838;
+    color: #fff;
+}
+
+#chart-title h1 {
+    font-size: 6em;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+#chart-title h2 {
+    font-size: 2.5em;
+    font-weight: 400;
+}
+
+.chart-svg {
+    vertical-align: middle;
+}
+
+.chart-content {
+    background-color: #383838;
+    color: #fff;
+}
+
+.content {
+    padding-right: 3em;
+    padding-left: 3em;
+}
+
+.chart-content p {
+    text-indent: 2em;
+}
+
+.content-title {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.lead {
+    text-align: justify;
+    font-size: 1.3em;
+}
+
+.section-tools {
+    background-color: #383838;
+    color: #fff;
+    padding-right: 1em;
+}
+
+.service-heading {
+    margin: 15px 0;
+    text-transform: none;
+}
+
+.text-muted {
+    color: #ddd !important;
+}
+
+.text-primary {
+    color: #fed136 !important;
+}
+
+ul.social-buttons {
+    margin-bottom: 0;
+}
+ul.social-buttons li a {
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    color: white;
+    border-radius: 100%;
+    outline: none;
+    background-color: #212529;
+}
+ul.social-buttons li a:active,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:hover {
+    background-color: #fed136;
+}
+
+.team-member {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.team-member img {
+    max-width: 150px;
+    margin-bottom: 1em;
+}
+
+/* Override fullpage.js */
+#fp-nav ul li a span {
+    background: #fff !important;
+}
