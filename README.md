@@ -6,7 +6,7 @@ This project is about doing data analysis. We've chosen IMDB Top 1000 Films(2006
 Data from : https://www.kaggle.com/PromptCloudHQ/imdb-data/data
 
 ## Group Members
- |<img src="Web/assets/team/01" width="120px" height="120px">|<img src="Web/assets/team/02" width="120px" height="120px">|<img src="Web/assets/team/03" width="120px" height="120px">|<img src="Web/assets/team/04">|
+ |<img src="Web/assets/team/01.jpg" width="120px" height="120px">|<img src="Web/assets/team/02.jpg" width="120px" height="120px">|<img src="Web/assets/team/03.jpg" width="120px" height="120px">|<img src="Web/assets/team/04.jpg" width="120px" height="120px">|
 |:---:|:---:|:---:|:---:|
 |[peetck](https://github.com/peetck)|[thangmo29](https://github.com/thangmo29)|[KISSADAPA](https://github.com/KISSADAPA)|[blackjokerr](https://github.com/blackjokerrr)|ศรัณย์<br>ยันตะบุษย์|วรภัทร<br>ภัทรเมธาวรกุล|กฤษฎาภา<br>ง่วนจร|ศิรวิทย์<br>ยอดจิตร|
 
