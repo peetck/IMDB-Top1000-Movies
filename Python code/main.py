@@ -13,18 +13,7 @@ def main():
     inp = int(input("Choose What graph you want to create: "))
     if inp == 1:
         print("Loading ......")
-        project.genre_06(data)
-        project.genre_07(data)
-        project.genre_08(data)
-        project.genre_09(data)
-        project.genre_10(data)
-        project.genre_11(data)
-        project.genre_12(data)
-        project.genre_13(data)
-        project.genre_14(data)
-        project.genre_15(data)
-        project.genre_16(data)
-
+        project.genre_2006_2016(data)
     elif inp == 2:
         print("Loading ......")
         project.genre_graph(data)
@@ -45,17 +34,7 @@ def main():
 
     elif inp == 6:
         print("Loading ......")
-        project.genre_06(data)
-        project.genre_07(data)
-        project.genre_08(data)
-        project.genre_09(data)
-        project.genre_10(data)
-        project.genre_11(data)
-        project.genre_12(data)
-        project.genre_13(data)
-        project.genre_14(data)
-        project.genre_15(data)
-        project.genre_16(data)
+        project.genre_2006_2016(data)
         project.genre_graph(data)
         project.genre_price(data)
         project.runtime(data)

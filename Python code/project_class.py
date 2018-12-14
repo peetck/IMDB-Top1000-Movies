@@ -8,203 +8,26 @@ from wordcloud import WordCloud
 import pygal
 #
 class project:
-    def genre_06(data):
+    def genre_2006_2016(data):
         genre = data["Genre"].tolist()
         years = data["Year"].tolist()
-        dic_06 = {}
-        for i in range(len(genre)):
-            if years[i] == 2006:
-                value = genre[i].split(",")
-                for j in value:
-                    if j in dic_06:
-                        dic_06[j] += 1
-                    else:
-                        dic_06[j] = 1
-        graph = pygal.Bar()
-        graph.title = "ประเภทของหนัง ของปี 2006 [44 เรื่อง]"
-        for i in dic_06:
-            graph.add(i, dic_06[i])
-        graph.render_to_file("../Graph/2006.svg")
-
-    def genre_07(data):
-        genre = data["Genre"].tolist()
-        years = data["Year"].tolist()
-        dic_07 = {}
-        for i in range(len(genre)):
-            if years[i] == 2007:
-                value = genre[i].split(",")
-                for j in value:
-                    if j in dic_07:
-                        dic_07[j] += 1
-                    else:
-                        dic_07[j] = 1
-        graph = pygal.Bar()
-        graph.title = "ประเภทของหนัง ของปี 2007 [53 เรื่อง]"
-        for i in dic_07:
-            graph.add(i, dic_07[i])
-        graph.render_to_file("../Graph/2007.svg")
-
-    def genre_08(data):
-        genre = data["Genre"].tolist()
-        years = data["Year"].tolist()
-        dic_08 = {}
-        for i in range(len(genre)):
-            if years[i] == 2008:
-                value = genre[i].split(",")
-                for j in value:
-                    if j in dic_08:
-                        dic_08[j] += 1
-                    else:
-                        dic_08[j] = 1
-        graph = pygal.Bar()
-        graph.title = "ประเภทของหนัง ของปี 2008 [52 เรื่อง]"
-        for i in dic_08:
-            graph.add(i, dic_08[i])
-        graph.render_to_file("../Graph/2008.svg")
-
-    def genre_09(data):
-        genre = data["Genre"].tolist()
-        years = data["Year"].tolist()
-        dic_09 = {}
-        for i in range(len(genre)):
-            if years[i] == 2009:
-                value = genre[i].split(",")
-                for j in value:
-                    if j in dic_09:
-                        dic_09[j] += 1
-                    else:
-                        dic_09[j] = 1
-        graph = pygal.Bar()
-        graph.title = "ประเภทของหนัง ของปี 2009 [51 เรื่อง]"
-        for i in dic_09:
-            graph.add(i, dic_09[i])
-        graph.render_to_file("../Graph/2009.svg")
-
-    def genre_10(data):
-        genre = data["Genre"].tolist()
-        years = data["Year"].tolist()
-        dic_10 = {}
-        for i in range(len(genre)):
-            if years[i] == 2010:
-                value = genre[i].split(",")
-                for j in value:
-                    if j in dic_10:
-                        dic_10[j] += 1
-                    else:
-                        dic_10[j] = 1
-        graph = pygal.Bar()
-        graph.title = "ประเภทของหนัง ของปี 2010 [60 เรื่อง]"
-        for i in dic_10:
-            graph.add(i, dic_10[i])
-        graph.render_to_file("../Graph/2010.svg")
-
-    def genre_11(data):
-        genre = data["Genre"].tolist()
-        years = data["Year"].tolist()
-        dic_11 = {}
-        for i in range(len(genre)):
-            if years[i] == 2011:
-                value = genre[i].split(",")
-                for j in value:
-                    if j in dic_11:
-                        dic_11[j] += 1
-                    else:
-                        dic_11[j] = 1
-        graph = pygal.Bar()
-        graph.title = "ประเภทของหนัง ของปี 2011 [63 เรื่อง]"
-        for i in dic_11:
-            graph.add(i, dic_11[i])
-        graph.render_to_file("../Graph/2011.svg")
-
-    def genre_12(data):
-        genre = data["Genre"].tolist()
-        years = data["Year"].tolist()
-        dic_12 = {}
-        for i in range(len(genre)):
-            if years[i] == 2012:
-                value = genre[i].split(",")
-                for j in value:
-                    if j in dic_12:
-                        dic_12[j] += 1
-                    else:
-                        dic_12[j] = 1
-        graph = pygal.Bar()
-        graph.title = "ประเภทของหนัง ของปี 2012 [64 เรื่อง]"
-        for i in dic_12:
-            graph.add(i, dic_12[i])
-        graph.render_to_file("../Graph/2012.svg")
-
-    def genre_13(data):
-        genre = data["Genre"].tolist()
-        years = data["Year"].tolist()
-        dic_13 = {}
-        for i in range(len(genre)):
-            if years[i] == 2013:
-                value = genre[i].split(",")
-                for j in value:
-                    if j in dic_13:
-                        dic_13[j] += 1
-                    else:
-                        dic_13[j] = 1
-        graph = pygal.Bar()
-        graph.title = "ประเภทของหนัง ของปี 2013 [91 เรื่อง]"
-        for i in dic_13:
-            graph.add(i, dic_13[i])
-        graph.render_to_file("../Graph/2013.svg")
-
-    def genre_14(data):
-        genre = data["Genre"].tolist()
-        years = data["Year"].tolist()
-        dic_14 = {}
-        for i in range(len(genre)):
-            if years[i] == 2014:
-                value = genre[i].split(",")
-                for j in value:
-                    if j in dic_14:
-                        dic_14[j] += 1
-                    else:
-                        dic_14[j] = 1
-        graph = pygal.Bar()
-        graph.title = "ประเภทของหนัง ของปี 2014 [98 เรื่อง]"
-        for i in dic_14:
-            graph.add(i, dic_14[i])
-        graph.render_to_file("../Graph/2014.svg")
-
-    def genre_15(data):
-        genre = data["Genre"].tolist()
-        years = data["Year"].tolist()
-        dic_15 = {}
-        for i in range(len(genre)):
-            if years[i] == 2015:
-                value = genre[i].split(",")
-                for j in value:
-                    if j in dic_15:
-                        dic_15[j] += 1
-                    else:
-                        dic_15[j] = 1
-        graph = pygal.Bar()
-        graph.title = "ประเภทของหนัง ของปี 2015 [127 เรื่อง]"
-        for i in dic_15:
-            graph.add(i, dic_15[i])
-        graph.render_to_file("../Graph/2015.svg")
-
-    def genre_16(data):
-        genre = data["Genre"].tolist()
-        years = data["Year"].tolist()
-        dic_16 = {}
-        for i in range(len(genre)):
-            if years[i] == 2016:
-                value = genre[i].split(",")
-                for j in value:
-                    if j in dic_16:
-                        dic_16[j] += 1
-                    else:
-                        dic_16[j] = 1
-        graph = pygal.Bar()
-        graph.title = "ประเภทของหนัง ของปี 2016 [297 เรื่อง]"
-        for i in dic_16:
-            graph.add(i, dic_16[i])
-        graph.render_to_file("../Graph/2016.svg")
+        for ye in range(2006, 2017):
+            dic = {}
+            count = 0
+            for i in range(len(genre)):
+                if years[i] == ye:
+                    value = genre[i].split(",")
+                    for j in value:
+                        if j in dic:
+                            dic[j] += 1
+                        else:
+                            dic[j] = 1
+                    count += 1
+            graph = pygal.Bar()
+            graph.title = "ประเภทของหนัง ของปี %d [%d เรื่อง]" %(ye,count)
+            for i in sorted(dic, key = lambda x: dic[x], reverse=True):
+                graph.add(i, dic[i])
+            graph.render_to_file("../Graph/%d.svg" %ye)
     def genre_graph(data):
         genre = data["Genre"].tolist()
         genre_2 = []
@@ -323,7 +146,7 @@ class project:
                         dic[j] = runtime[i]
         graph = pygal.Bar()
         graph.title = "Runtime [IMDB Top 1000 Movies (2006 - 2016)]"
-        for i in dic:
+        for i in sorted(dic, key = lambda x: dic[x], reverse=True):
             graph.add(i, dic[i])
         graph.render_to_file("../Graph/runtime.svg")
     def vote(data):
@@ -339,7 +162,7 @@ class project:
         graph = pygal.Bar()
         graph.title = "Vote [IMDB Top 1000 Movies (2006 - 2016)]"
 
-        for i in dic:
+        for i in sorted(dic, key = lambda x: dic[x], reverse=True):
             graph.add(i, dic[i])
         graph.render_to_file("../Graph/vote.svg")
     def rating(data):
@@ -355,7 +178,7 @@ class project:
         graph = pygal.Bar()
         graph.title = "Rating [IMDB Top 1000 Movies (2006 - 2016)]"
 
-        for i in dic:
+        for i in sorted(dic, key = lambda x: dic[x], reverse=True):
             graph.add(i, dic[i])
         graph.render_to_file("../Graph/rating.svg")
 
