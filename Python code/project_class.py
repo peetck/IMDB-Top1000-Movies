@@ -148,7 +148,7 @@ class project:
             graph_dic[i] = np.mean(dic[i])
         graph = pygal.Bar()
         graph.title = "Runtime [IMDB Top 1000 Movies (2006 - 2016)]"
-        for i in sorted(graph_dic, key = lambda x: dic[x], reverse=True):
+        for i in sorted(graph_dic, key = lambda x: graph_dic[x], reverse=True):
             graph.add(i, graph_dic[i])
         graph.render_to_file("../Graph/runtime.svg")
     def vote(data):
