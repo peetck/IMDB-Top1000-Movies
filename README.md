@@ -19,9 +19,7 @@
 
 * โดยใช้ข้อมูลจาก : https://www.kaggle.com/PromptCloudHQ/imdb-data/data ข้อมูลมีขนาด 302.51 KB
 
-* ผลลัพธ์ : 
-
-* เว็บไซต์ : https://peetck.github.io/IMDB-Top1000-Movies/
+* ผลลัพธ์ดูได้ที่ เว็บไซต์ : https://peetck.github.io/IMDB-Top1000-Movies/
 ## Group Members
  |<img src="docs/assets/team/01.jpg" width="120px" height="120px">|<img src="docs/assets/team/04.jpg" width="120px" height="120px">|<img src="docs/assets/team/03.jpg" width="120px" height="120px">|<img src="docs/assets/team/02.jpg" width="120px" height="120px">|
 |:---:|:---:|:---:|:---:|
