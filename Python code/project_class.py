@@ -140,14 +140,16 @@ class project:
         for i in range(len(runtime)):
             for j in genre[i].split(","):
                 if j not in dic:
-                    dic[j] = runtime[i]
+                    dic[j] = [runtime[i]]
                 else:
-                    if runtime[i] > dic[j]:
-                        dic[j] = runtime[i]
+                    dic[j] += [runtime[i]]
+        graph_dic = {}
+        for i in dic:
+            graph_dic[i] = np.mean(dic[i])
         graph = pygal.Bar()
         graph.title = "Runtime [IMDB Top 1000 Movies (2006 - 2016)]"
-        for i in sorted(dic, key = lambda x: dic[x], reverse=True):
-            graph.add(i, dic[i])
+        for i in sorted(graph_dic, key = lambda x: dic[x], reverse=True):
+            graph.add(i, graph_dic[i])
         graph.render_to_file("../Graph/runtime.svg")
     def vote(data):
         vote = data["Votes"].tolist()
