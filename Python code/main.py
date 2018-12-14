@@ -7,7 +7,7 @@ def main():
     print("1.genre 2010 - 2016 [each years]")
     print("2.genre 2010 - 2016 [all]")
     print("3.revenue [all]")
-    print("4.Rating, runtime, vote")
+    print("4.Rating, runtime, vote, director")
     print("5.Wordcloud")
     print("6.All")
     inp = int(input("Choose What graph you want to create: "))
@@ -27,7 +27,7 @@ def main():
         project.runtime(data)
         project.rating(data)
         project.vote(data)
-
+        project.director(data)
     elif inp == 5:
         print("Loading ......")
         project.word(data)
@@ -41,5 +41,6 @@ def main():
         project.rating(data)
         project.vote(data)
         project.word(data)
+        project.director(data)
 main()
 print("Success!!")

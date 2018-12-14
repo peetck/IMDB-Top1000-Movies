@@ -218,3 +218,20 @@ class project:
         plt.imshow(wordcloud, interpolation="bilinear")
         plt.axis("off")
         wordcloud.to_file("../Wordcloud/less50.png")
+    def director(data):
+        dic = {}
+        direct = data["Director"].tolist()
+        for i in direct:
+            if i in dic:
+                dic[i] += 1
+            else:
+                dic[i] = 1
+        graph = pygal.Bar()
+        graph.title = "Director"
+        count = 0
+        for i in sorted(dic, key = lambda x: dic[x], reverse=True):
+            graph.add(i, dic[i])
+            count += 1
+            if count == 11:
+                break
+        graph.render_to_file("../Graph/Director.svg")
