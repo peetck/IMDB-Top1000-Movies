@@ -23,6 +23,12 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/component.css">
+
+    <!-- Js Slide-->
+    <script type="text/javascript" src="assets/js/slide/jquery.cbpFWSlider.js"></script>
+    <script type="text/javascript" src="assets/js/slide/modernizr.custom.js"></script>
 </head>
 
 <body>
@@ -61,7 +67,8 @@
                 </div>
             </div>
         </div>
-
+        
+        <!--รายได้ของหนัง-->
         <div class="section chart-content">
             <div class="row">
                 <div class="col-sm-12 text-center">
@@ -73,13 +80,133 @@
                 <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 chart-svg">
                     <embed type="image/svg+xml" src="assets/images/genre_price_each_years.svg" class="img-fluid" />
                     <br><br>
-                    <p class="lead">สิ่งที่มีอิทธิพลต่อรายได้ของหนังนั้นขึ้นอยู่กับ <a href="rating_vote.html">Rating and Vote</a>
-                    <br>
+                    <p class="lead">
+                    <!--ใส่ข้อความตรงนี้--> 
                     </p>
                 </div>
             </div>
         </div>
 
+
+        <!--wordcloud-->
+        <div class="section chart-content">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h1 class="content-title"> คําภาษาอังกฤษที่ถูกใช้มากที่สุดในหนังยอดนิยม ตั้งแต่ปี 2006-2016</h1>
+                        <br />
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-lg-7 col-xl-7 chart-svg">
+                        <img src="/Wordcloud/all.png" class="img-fluid" />
+                    </div>
+                    <div class="col-lg-5 col-xl-5">
+                        <p class="lead">
+                        <!--ใส่ข้อความ-->รูปด้านซ้ายของเราแสดงให้เห็นถึงคำที่ถูกใช้ในเรื่องย่อของหนังกันทั่วโลกตั้งแต่ในปี 2006-2016
+                        เราจึงวิเคราะห์ได้ว่าคำที่ใช้นั้นมักเป็น "คำพื้นฐานในภาษาอังกฤษ"<br><br>
+
+                        <a href="/Wordcloud/more50.png" target="_blank">
+                            <img src="/Wordcloud/more50.png" alt="more50" width="200" height="200" ><br>
+                        </a>
+                            และคำที่สุดใช้มากกว่า 50 ล้านคำ (สามารถคลิกที่รูปเพื่อดูรูปแบบเต็มจอได้)<br><br>
+
+                        <a href="/Wordcloud/less50.png" target="_blank">
+                            <img src="/Wordcloud/less50.png" alt="less50" width="200" height="200"><br>
+                        </a>
+                                และคำที่ใช้น้อยกว่า 50 ล้านคำ (สามารถคลิกที่รูปเพื่อดูรูปแบบเต็มจอได้)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+        <!--Rating 2006-2016 -->
+        <div class="section chart-content" id="rating">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h1 class="content-title"> Rating ตั้งแต่ปี 2006-2016</h1>
+                        <br />
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 chart-svg">
+                        <embed type="image/svg+xml" src="assets/images/vote.svg" class="img-fluid" />
+                        <br><br>
+                        <p class="lead">
+                                Rating ของ "หนังแนว Drama" นั้นเป็นที่นิยมมากที่สุดตั้งแต่ปี 2006-2016 เราจะเห็นได้จากกราฟ
+                                รองลงด้วย Action, Comedy, Adventure, Thriller, Crime, Romance, Sci-Fi, Mystery,
+                                 Horror, Fantasy, Biography, Animation, Family, History, Sport, Music, War, Western,
+                                   Musical       
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Vote 2006-2016 -->
+            <div class="section chart-content" id="vote">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h1 class="content-title">ผล Vote ตั้งแต่ปี 2006-2016</h1>
+                            <br />
+                        </div>
+                    </div>
+                    <div class="row content">
+                        <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 chart-svg">
+                            <embed type="image/svg+xml" src="assets/images/vote.svg" class="img-fluid" />
+                            <br><br>
+                            <p class="lead">
+                                จากการสำรวจผล Vote ที่คนนิยมโหวตกันนั้นจะเห็นได้จากกราฟว่า "หนังแนว Drama" จะเป็นคนนิยมโหวตกันมากกว่า <u>70,000,000</u> โหวต
+                                และตามมาติดๆคือ "หนังแนว Action" ที่มีคนโหวตเยอะรองจาก"หนังแนว Drama"        
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Runtime Movies-->
+                <div class="section chart-content" id="vote">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <h1 class="content-title">ความยาวของหนังในแต่ละปีตั้งแต่ปี 2006-2016 </h1>
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row content">
+                            <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 chart-svg">
+                                <embed type="image/svg+xml" src="assets/images/runtime.svg" class="img-fluid" />
+                                <br><br>
+                                <p class="lead">
+                                <!--ใส่ข้อความตรงนี้-->       
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                
+                <!--Director-->
+                <div class="section chart-content" id="vote">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <h1 class="content-title">ผู้กำกับหนังยอดนิยมทั้งหมดตั้งแต่ปี 2006-2016 </h1>
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row content">
+                            <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 chart-svg">
+                                <embed type="image/svg+xml" src="assets/images/Director.svg" class="img-fluid" />
+                                <br><br>
+                                <p class="lead">
+                                <!--ใส่ข้อความตรงนี้-->       
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+        <!--Tools-->
         <div class="section section-tools">
             <div class="container">
                 <div class="row">
@@ -229,6 +356,7 @@
                         </div>
                     </div>
 
+                    
 
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
