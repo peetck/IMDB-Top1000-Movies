@@ -14,7 +14,7 @@
 * ผลลัพธ์ : 
 
 ## Group Members
- |<img src="Web/assets/team/01.jpg" width="120px" height="120px">|<img src="Web/assets/team/04.jpg" width="120px" height="120px">|<img src="Web/assets/team/03.jpg" width="120px" height="120px">|<img src="Web/assets/team/02.jpg" width="120px" height="120px">|
+ |<img src="docs/assets/team/01.jpg" width="120px" height="120px">|<img src="docs/assets/team/04.jpg" width="120px" height="120px">|<img src="docs/assets/team/03.jpg" width="120px" height="120px">|<img src="docs/assets/team/02.jpg" width="120px" height="120px">|
 |:---:|:---:|:---:|:---:|
 |[peetck](https://github.com/peetck)|[thangmo29](https://github.com/thangmo29)|[KISSADAPA](https://github.com/KISSADAPA)|[blackjokerr](https://github.com/blackjokerrr)|ศรัณย์<br>ยันตะบุษย์|วรภัทร<br>ภัทรเมธาวรกุล|กฤษฎาภา<br>ง่วนจร|ศิรวิทย์<br>ยอดจิตร|
 
