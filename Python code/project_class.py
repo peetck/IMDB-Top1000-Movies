@@ -105,8 +105,27 @@ class project:
             else:
                 state[i] += revenue[count]
             count += 1
+        graph = pygal.Bar()
+        graph.title = "รายได้ของหนังแต่ละประเภทรวมทุกปี (US-Dollars Millions)"
+        listed_genre = ["Action", "Adventure","Horror","Animation","Comedy","Biography","Drama","Crime","Romance","Mystery","Thriller","Sci-Fi","Fantasy"]
+        listed_each = [dic_2006, dic_2007, dic_2008, dic_2009, dic_2010 , dic_2011, dic_2012, dic_2013, dic_2014, dic_2015, dic_2016]
+        all_dic = {}
+        for dic in listed_each:
+            for j in dic:
+                if j in all_dic:
+                    all_dic[j] += dic[j]
+                else:
+                    all_dic[j] = dic[j]
+        for i in sorted(all_dic, reverse=True, key= lambda x: all_dic[x]):
+            graph.add(i, all_dic[i])
+        graph.render_to_file("../Graph/genre_price_all.svg")
+        graph.render_to_file("../docs/assets/images/genre_price_all.svg")
+
+
+
+
         graph = pygal.Line()
-        graph.title = "รายได้จากการขายหนังแต่ละประเภท (US-Dollars Millions)"
+        graph.title = "รายได้จากการขายหนังแต่ละประเภทในแต่ละปี (US-Dollars Millions)"
         graph.x_labels = map(str, range(2006, 2017))
         listed_genre = ["Action", "Adventure","Horror","Animation","Comedy","Biography","Drama","Crime","Romance","Mystery","Thriller","Sci-Fi","Fantasy"]
         for i in listed_genre:
