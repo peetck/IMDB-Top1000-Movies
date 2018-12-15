@@ -106,32 +106,10 @@ class project:
         graph = pygal.Line()
         graph.title = "รายได้จากการขายหนังแต่ละประเภท (US-Dollars)"
         graph.x_labels = map(str, range(2006, 2017))
-        graph.add("Action", [dic_2006["Action"], dic_2007["Action"], dic_2008["Action"], dic_2009["Action"], dic_2010["Action"], dic_2011["Action"], dic_2012["Action"]\
-            , dic_2013["Action"], dic_2014["Action"], dic_2015["Action"], dic_2016["Action"]])
-        graph.add("Adventure", [dic_2006["Adventure"], dic_2007["Adventure"], dic_2008["Adventure"], dic_2009["Adventure"], dic_2010["Adventure"], dic_2011["Adventure"], dic_2012["Adventure"]\
-            , dic_2013["Adventure"], dic_2014["Adventure"], dic_2015["Adventure"], dic_2016["Adventure"]])
-        graph.add("Horror", [dic_2006["Horror"], dic_2007["Horror"], dic_2008["Horror"], dic_2009["Horror"], dic_2010["Horror"], dic_2011["Horror"], dic_2012["Horror"]\
-            , dic_2013["Horror"], dic_2014["Horror"], dic_2015["Horror"], dic_2016["Horror"]])
-        graph.add("Animation", [dic_2006["Animation"], dic_2007["Animation"], dic_2008["Animation"], dic_2009["Animation"], dic_2010["Animation"], dic_2011["Animation"], dic_2012["Animation"]\
-            , dic_2013["Animation"], dic_2014["Animation"], dic_2015["Animation"], dic_2016["Animation"]])
-        graph.add("Comedy", [dic_2006["Comedy"], dic_2007["Comedy"], dic_2008["Comedy"], dic_2009["Comedy"], dic_2010["Comedy"], dic_2011["Comedy"], dic_2012["Comedy"]\
-            , dic_2013["Comedy"], dic_2014["Comedy"], dic_2015["Comedy"], dic_2016["Comedy"]])
-        graph.add("Biography", [dic_2006["Biography"], dic_2007["Biography"], dic_2008["Biography"], dic_2009["Biography"], dic_2010["Biography"], dic_2011["Biography"], dic_2012["Biography"]\
-            , dic_2013["Biography"], dic_2014["Biography"], dic_2015["Biography"], dic_2016["Biography"]])
-        graph.add("Drama", [dic_2006["Drama"], dic_2007["Drama"], dic_2008["Drama"], dic_2009["Drama"], dic_2010["Drama"], dic_2011["Drama"], dic_2012["Drama"]\
-            , dic_2013["Drama"], dic_2014["Drama"], dic_2015["Drama"], dic_2016["Drama"]])
-        graph.add("Crime", [dic_2006["Crime"], dic_2007["Crime"], dic_2008["Crime"], dic_2009["Crime"], dic_2010["Crime"], dic_2011["Crime"], dic_2012["Crime"]\
-            , dic_2013["Crime"], dic_2014["Crime"], dic_2015["Crime"], dic_2016["Crime"]])
-        graph.add("Romance", [dic_2006["Romance"], dic_2007["Romance"], dic_2008["Romance"], dic_2009["Romance"], dic_2010["Romance"], dic_2011["Romance"], dic_2012["Romance"]\
-            , dic_2013["Romance"], dic_2014["Romance"], dic_2015["Romance"], dic_2016["Romance"]])
-        graph.add("Mystery", [dic_2006["Mystery"], dic_2007["Mystery"], dic_2008["Mystery"], dic_2009["Mystery"], dic_2010["Mystery"], dic_2011["Mystery"], dic_2012["Mystery"]\
-            , dic_2013["Mystery"], dic_2014["Mystery"], dic_2015["Mystery"], dic_2016["Mystery"]])
-        graph.add("Thriller", [dic_2006["Thriller"], dic_2007["Thriller"], dic_2008["Thriller"], dic_2009["Thriller"], dic_2010["Thriller"], dic_2011["Thriller"], dic_2012["Thriller"]\
-            , dic_2013["Thriller"], dic_2014["Thriller"], dic_2015["Thriller"], dic_2016["Thriller"]])
-        graph.add("Sci-Fi", [dic_2006["Sci-Fi"], dic_2007["Sci-Fi"], dic_2008["Sci-Fi"], dic_2009["Sci-Fi"], dic_2010["Sci-Fi"], dic_2011["Sci-Fi"], dic_2012["Sci-Fi"]\
-            , dic_2013["Sci-Fi"], dic_2014["Sci-Fi"], dic_2015["Sci-Fi"], dic_2016["Sci-Fi"]])
-        graph.add("Fantasy", [dic_2006["Fantasy"], dic_2007["Fantasy"], dic_2008["Fantasy"], dic_2009["Fantasy"], dic_2010["Fantasy"], dic_2011["Fantasy"], dic_2012["Fantasy"]\
-            , dic_2013["Fantasy"], dic_2014["Fantasy"], dic_2015["Fantasy"], dic_2016["Fantasy"]])
+        listed_genre = ["Action", "Adventure","Horror","Animation","Comedy","Biography","Drama","Crime","Romance","Mystery","Thriller","Sci-Fi","Fantasy"]
+        for i in listed_genre:
+            graph.add("%s" %i, [dic_2006["%s" %i], dic_2007["%s" %i], dic_2008["%s" %i], dic_2009["%s" %i], dic_2010["%s" %i], dic_2011["%s" %i], dic_2012["%s" %i]\
+            , dic_2013["%s" %i], dic_2014["%s" %i], dic_2015["%s" %i], dic_2016["%s" %i]])
         graph.render_to_file("../Graph/genre_price_each_years.svg")
     def runtime(data):
         runtime = data["Runtime (Minutes)"].tolist()
