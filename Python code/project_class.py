@@ -114,6 +114,16 @@ class project:
             , dic_2013["%s" %i], dic_2014["%s" %i], dic_2015["%s" %i], dic_2016["%s" %i]])
         graph.render_to_file("../Graph/genre_price_each_years.svg")
         graph.render_to_file("../docs/assets/images/genre_price_each_years.svg")
+        listed_each = [dic_2006, dic_2007, dic_2008, dic_2009, dic_2010 , dic_2011, dic_2012, dic_2013, dic_2014, dic_2015, dic_2016]
+        count = 0
+        for i in range(2006, 2017):
+            graph = pygal.Bar()
+            graph.title = "รายได้จากการขายหนังแต่ละประเภทของปี %d (US-Dollars Millions)" %i
+            for j in sorted(listed_each[count], key= lambda x: listed_each[count][x], reverse=True):
+                graph.add(j, listed_each[count][j])
+                graph.render_to_file("../Graph/price%d.svg" %i)
+                graph.render_to_file("../docs/assets/images/price%d.svg" %i)
+            count += 1
     def runtime(data):
         runtime = data["Runtime (Minutes)"].tolist()
         genre = data["Genre"].tolist()
