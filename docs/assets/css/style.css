@@ -9,8 +9,7 @@ body {
     background: url('../images/heading.jpg');
     background-size: cover;
     background-position: center;
-    color: black;
-    text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff;
+    color: white;
 }
 
 #heading h1 {
@@ -28,8 +27,7 @@ body {
     background: url('../images/dataset.jpg');
     background-size: cover;
     background-position: center;
-    color: black;
-    text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff;
+    color: white;
 }
 
 #dataset h1 {
@@ -49,7 +47,7 @@ body {
 }
 
 #dataset h2 a {
-    color: black;
+    color: white;
     text-decoration: underline;
 }
 
@@ -99,8 +97,7 @@ body {
 
 .lead {
     text-align: justify;
-    font-size: 1.5em;
-    font-weight: 600;
+    font-size: 1.3em;
 }
 
 .section-tools {
@@ -162,16 +159,16 @@ div.gallery {
     float: left;
     width: 180px;
 }
-  
+
   div.gallery:hover {
     border: 1px solid #777;
 }
-  
+
     div.gallery img {
     width: 100%;
     height: auto;
 }
-  
+
   div.desc {
     padding: 15px;
     text-align: center;
