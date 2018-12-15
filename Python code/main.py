@@ -1,5 +1,7 @@
 from project_class import project
 import pandas as pd
+import time
+start = time.time()
 def main():
     data = pd.read_csv("../IMDB-Movie-Data.csv")
     print("***************************************")
@@ -43,4 +45,4 @@ def main():
         project.word(data)
         project.director(data)
 main()
-print("Success!!")
+print("Success!!  use: %s sec" %(time.time() - start))

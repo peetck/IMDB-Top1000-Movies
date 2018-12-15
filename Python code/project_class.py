@@ -6,6 +6,7 @@ import os
 import pandas as pd
 from wordcloud import WordCloud
 import pygal
+
 #
 class project:
     def genre_2006_2016(data):
@@ -63,19 +64,10 @@ class project:
                 genre_reduce.append(i)
                 year.append(year[genre_reduce.index(i)])
                 revenue.append(revenue[genre_reduce.index(i)])
-        dic_2006, dic_2007, dic_2008, dic_2009, dic_2010\
-        , dic_2011, dic_2012, dic_2013, dic_2014, dic_2015\
-        , dic_2016 = {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
-        {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
-        {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
-        {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
-        {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
-        {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
-        {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}\
-        , {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
-        {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
-        {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}, \
-        {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}
+        dic_2006 = {"Romance":0, "Mystery":0, "Thriller":0, "Sci-Fi":0, "Fantasy":0, "Animation":0, "Biography":0}
+        dic_2007,dic_2008,dic_2009,dic_2010,dic_2011,dic_2012,dic_2013,dic_2014,dic_2015,dic_2016 = \
+        dic_2006.copy(),dic_2006.copy(),dic_2006.copy(),dic_2006.copy(),dic_2006.copy(),dic_2006.copy(),dic_2006.copy(),dic_2006.copy()\
+        ,dic_2006.copy(),dic_2006.copy()
         count = 0
         for i in genre_reduce:
             if year[count] == 2006:
@@ -133,6 +125,8 @@ class project:
             , dic_2013["%s" %i], dic_2014["%s" %i], dic_2015["%s" %i], dic_2016["%s" %i]])
         graph.render_to_file("../Graph/genre_price_each_years.svg")
         graph.render_to_file("../docs/assets/images/genre_price_each_years.svg")
+
+
         listed_each = [dic_2006, dic_2007, dic_2008, dic_2009, dic_2010 , dic_2011, dic_2012, dic_2013, dic_2014, dic_2015, dic_2016]
         count = 0
         for i in range(2006, 2017):
