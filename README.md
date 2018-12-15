@@ -1,7 +1,8 @@
 ## IMDB-Top1000-Movies
-* This project is a part of the subject Problem Solving in Information Technology (PSIT), Faculty of Information Technology, King Mongkut's   Institute of Technology Ladkrabang (KMITL).
+* โปรเจคนี้เป็นส่วนหนึ่งของวิชา Problem Solving in Information Technology (PSIT)  
+คณะเทคโนโลยีสารสนเทศ สถาบันพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
 
-* This project is about doing data analysis. We've chosen IMDb Top 1000 Films(2006-2016) for this project.
+* โปรเจคนี้เกี่ยวกับการทํา Data Analysis พวกเราเลือก IMDB Top 1000 Films (2006-2016) สําหรับโปรเจคนี้
 
 * Data from : https://www.kaggle.com/PromptCloudHQ/imdb-data/data
 
