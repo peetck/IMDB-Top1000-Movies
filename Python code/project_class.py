@@ -28,6 +28,7 @@ class project:
             for i in sorted(dic, key = lambda x: dic[x], reverse=True):
                 graph.add(i, dic[i])
             graph.render_to_file("../Graph/%d.svg" %ye)
+            graph.render_to_file("../docs/assets/images/%d.svg" %ye)
     def genre_graph(data):
         genre = data["Genre"].tolist()
         genre_2 = []
@@ -50,6 +51,7 @@ class project:
         for i in sorted(dic.values())[::-1]:
             graph.add(dic2[i], i)
         graph.render_to_file("../Graph/genre_graph.svg")
+        graph.render_to_file("../docs/assets/images/genre_graph.svg")
     def genre_price(data):
         genre = data["Genre"].tolist()
         revenue = data["Revenue (Millions)"].tolist()
@@ -104,13 +106,14 @@ class project:
                 state[i] += revenue[count]
             count += 1
         graph = pygal.Line()
-        graph.title = "รายได้จากการขายหนังแต่ละประเภท (US-Dollars)"
+        graph.title = "รายได้จากการขายหนังแต่ละประเภท (US-Dollars Millions)"
         graph.x_labels = map(str, range(2006, 2017))
         listed_genre = ["Action", "Adventure","Horror","Animation","Comedy","Biography","Drama","Crime","Romance","Mystery","Thriller","Sci-Fi","Fantasy"]
         for i in listed_genre:
             graph.add("%s" %i, [dic_2006["%s" %i], dic_2007["%s" %i], dic_2008["%s" %i], dic_2009["%s" %i], dic_2010["%s" %i], dic_2011["%s" %i], dic_2012["%s" %i]\
             , dic_2013["%s" %i], dic_2014["%s" %i], dic_2015["%s" %i], dic_2016["%s" %i]])
         graph.render_to_file("../Graph/genre_price_each_years.svg")
+        graph.render_to_file("../docs/assets/images/genre_price_each_years.svg")
     def runtime(data):
         runtime = data["Runtime (Minutes)"].tolist()
         genre = data["Genre"].tolist()
@@ -129,6 +132,7 @@ class project:
         for i in sorted(graph_dic, key = lambda x: graph_dic[x], reverse=True):
             graph.add(i, graph_dic[i])
         graph.render_to_file("../Graph/runtime.svg")
+        graph.render_to_file("../docs/assets/images/runtime.svg")
     def vote(data):
         vote = data["Votes"].tolist()
         genre = data["Genre"].tolist()
@@ -145,6 +149,7 @@ class project:
         for i in sorted(dic, key = lambda x: dic[x], reverse=True):
             graph.add(i, dic[i])
         graph.render_to_file("../Graph/vote.svg")
+        graph.render_to_file("../docs/assets/images/vote.svg")
     def rating(data):
         rating = data["Rating"].tolist()
         genre = data["Genre"].tolist()
@@ -152,16 +157,18 @@ class project:
         for i in range(len(rating)):
             for j in genre[i].split(","):
                 if j not in dic:
-                    dic[j] = rating[i]
+                    dic[j] = [rating[i]]
                 else:
-                    dic[j] += rating[i]
+                    dic[j] += [rating[i]]
         graph = pygal.Bar()
         graph.title = "Rating [IMDB Top 1000 Movies (2006 - 2016)]"
-
-        for i in sorted(dic, key = lambda x: dic[x], reverse=True):
-            graph.add(i, dic[i])
+        graph_dic = {}
+        for i in dic:
+            graph_dic[i] = np.mean(dic[i])
+        for i in sorted(graph_dic, key = lambda x: graph_dic[x], reverse=True):
+            graph.add(i, graph_dic[i])
         graph.render_to_file("../Graph/rating.svg")
-
+        graph.render_to_file("../docs/assets/images/rating.svg")
     def word(data):
         description = data["Description"].tolist()
         text = ""
@@ -173,7 +180,7 @@ class project:
         plt.imshow(wordcloud, interpolation="bilinear")
         plt.axis("off")
         wordcloud.to_file("../Wordcloud/all.png")
-
+        wordcloud.to_file("../docs/assets/images/all.png")
         price = data["Revenue (Millions)"].tolist()
         text_more50 = ""
         text_less50 = ""
@@ -189,13 +196,14 @@ class project:
         plt.imshow(wordcloud, interpolation="bilinear")
         plt.axis("off")
         wordcloud.to_file("../Wordcloud/more50.png")
-
+        wordcloud.to_file("../docs/assets/images/more50.png")
         popcorn = np.array(Image.open(path.join("../Picture/popcorn.png")))
         wordcloud = WordCloud(max_font_size=60, mask=popcorn,background_color="white").generate(text_less50)
         plt.figure()
         plt.imshow(wordcloud, interpolation="bilinear")
         plt.axis("off")
         wordcloud.to_file("../Wordcloud/less50.png")
+        wordcloud.to_file("../docs/assets/images/less50.png")
     def director(data):
         dic = {}
         direct = data["Director"].tolist()
@@ -213,3 +221,5 @@ class project:
             if count == 11:
                 break
         graph.render_to_file("../Graph/Director.svg")
+        graph.render_to_file("../docs/assets/images/Director.svg")
+####################################################################
