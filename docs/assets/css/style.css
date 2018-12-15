@@ -9,7 +9,8 @@ body {
     background: url('../images/heading.jpg');
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: black;
+    text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff;
 }
 
 #heading h1 {
@@ -20,14 +21,15 @@ body {
 
 #heading p {
     font-size: 2em;
-    font-weight: 300;
+    font-weight: 600;
 }
 
 #dataset {
     background: url('../images/dataset.jpg');
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: black;
+    text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff;
 }
 
 #dataset h1 {
@@ -37,22 +39,22 @@ body {
 }
 
 #dataset h2 {
-    font-size: 4em;
-    font-weight: 500;
+    font-size: 3em;
+    font-weight: 600;
 }
 
 #dataset h3 {
-    font-size: 3em;
-    font-weight: 500;
+    font-size: 2em;
+    font-weight: 600;
 }
 
 #dataset h2 a {
-    color: #fff;
+    color: black;
     text-decoration: underline;
 }
 
 #dataset h2 a:hover {
-    color: #ee0;
+    color: red;
     text-decoration: underline;
 }
 
@@ -97,7 +99,8 @@ body {
 
 .lead {
     text-align: justify;
-    font-size: 1.3em;
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
 .section-tools {
@@ -113,6 +116,7 @@ body {
 
 .text-muted {
     color: #ddd !important;
+    font-size: 1.25em;
 }
 
 .text-primary {
@@ -171,6 +175,8 @@ div.gallery {
   div.desc {
     padding: 15px;
     text-align: center;
+    font-size: 1.15em;
+    font-weight: 600;
 }
 
 
