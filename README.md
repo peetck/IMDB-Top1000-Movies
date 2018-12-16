@@ -4,8 +4,6 @@
 
 * โปรเจคนี้เกี่ยวกับการทํา Data Analysis พวกเราเลือก IMDB Top 1000 Films (2006-2016) สําหรับโปรเจคนี้
 
-* Data from : https://www.kaggle.com/PromptCloudHQ/imdb-data/data
-
 * เราทำการวิจัย หนัง 1000 เรื่อง จาก IMDb ตั้งแต่ปี 2006-2016 (1000 เรื่อง)
 
 * เรานำหนัง ทั้ง 1000 เรื่องมาวิเคราะห์ ความนิยมของหนังประเภทต่างๆ, รายได้ของหนังแต่ละประเภทในแต่ละปี และนำมาวิเคราะห์ความเปลี่ยนแปลงในแต่ละปี
@@ -27,6 +25,7 @@
  |<img src="docs/assets/team/01.jpg" width="120px" height="120px">|<img src="docs/assets/team/04.jpg" width="120px" height="120px">|<img src="docs/assets/team/03.jpg" width="120px" height="120px">|<img src="docs/assets/team/02.jpg" width="120px" height="120px">|
 |:---:|:---:|:---:|:---:|
 |[peetck](https://github.com/peetck)|[thangmo29](https://github.com/thangmo29)|[KISSADAPA](https://github.com/KISSADAPA)|[blackjokerr](https://github.com/blackjokerrr)|ศรัณย์<br>ยันตะบุษย์|วรภัทร<br>ภัทรเมธาวรกุล|กฤษฎาภา<br>ง่วนจร|ศิรวิทย์<br>ยอดจิตร|
+
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
