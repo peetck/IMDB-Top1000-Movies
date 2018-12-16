@@ -25,7 +25,7 @@ class project:
                             dic[j] = 1
                     count += 1
             graph = pygal.Bar()
-            graph.title = "ประเภทของหนังปี %d [%d เรื่อง]" %(ye,count)
+            graph.title = "ประเภทของภาพยนตร์ปี %d [%d เรื่อง]" %(ye,count)
             for i in sorted(dic, key = lambda x: dic[x], reverse=True):
                 graph.add(i, dic[i])
             graph.render_to_file("../Graph/%d.svg" %ye)
@@ -47,7 +47,7 @@ class project:
         for i in dic:
             dic2[dic[i]] = i
         graph = pygal.Bar()
-        graph.title = "ประเภทของหนัง ตั้งแต่ปี 2006 - 2016"
+        graph.title = "ประเภทของภาพยนตร์ ตั้งแต่ปี 2006 - 2016"
         value = []
         for i in sorted(dic.values())[::-1]:
             graph.add(dic2[i], i)
@@ -98,7 +98,7 @@ class project:
                 state[i] += revenue[count]
             count += 1
         graph = pygal.Bar()
-        graph.title = "รายได้ของหนังแต่ละประเภท [รวมทุกปี] (US-Dollars Millions)"
+        graph.title = "รายได้ของภาพยนตร์แต่ละประเภท [รวมทุกปี] (US-Dollars Millions)"
         listed_genre = ["Action", "Adventure","Horror","Animation","Comedy","Biography","Drama","Crime","Romance","Mystery","Thriller","Sci-Fi","Fantasy"]
         listed_each = [dic_2006, dic_2007, dic_2008, dic_2009, dic_2010 , dic_2011, dic_2012, dic_2013, dic_2014, dic_2015, dic_2016]
         all_dic = {}
@@ -117,7 +117,7 @@ class project:
 
 
         graph = pygal.Line()
-        graph.title = "รายได้จากการขายหนังแต่ละประเภทในแต่ละปี (US-Dollars Millions)"
+        graph.title = "รายได้จากการขายภาพยนตร์แต่ละประเภทในแต่ละปี (US-Dollars Millions)"
         graph.x_labels = map(str, range(2006, 2017))
         listed_genre = ["Action", "Adventure","Horror","Animation","Comedy","Biography","Drama","Crime","Romance","Mystery","Thriller","Sci-Fi","Fantasy"]
         for i in listed_genre:
@@ -131,7 +131,7 @@ class project:
         count = 0
         for i in range(2006, 2017):
             graph = pygal.Bar()
-            graph.title = "รายได้รวมของหนังปี %d (US-Dollars Millions)" %i
+            graph.title = "รายได้รวมของภาพยนตร์ปี %d (US-Dollars Millions)" %i
             for j in sorted(listed_each[count], key= lambda x: listed_each[count][x], reverse=True):
                 graph.add(j, listed_each[count][j])
                 graph.render_to_file("../Graph/price%d.svg" %i)
@@ -151,7 +151,7 @@ class project:
         for i in dic:
             graph_dic[i] = np.mean(dic[i])
         graph = pygal.Bar()
-        graph.title = "ความยาวเฉลี่ยของหนังในแต่ละประเภท (2006-2016)"
+        graph.title = "ความยาวเฉลี่ยของภาพยนตร์ในแต่ละประเภท (2006-2016)"
         for i in sorted(graph_dic, key = lambda x: graph_dic[x], reverse=True):
             graph.add(i, graph_dic[i])
         graph.render_to_file("../Graph/runtime.svg")
@@ -159,6 +159,7 @@ class project:
     def vote(data):
         vote = data["Votes"].tolist()
         genre = data["Genre"].tolist()
+        year = data["Year"].tolist()
         dic = {}
         for i in range(len(vote)):
             for j in genre[i].split(","):
@@ -167,12 +168,28 @@ class project:
                 else:
                     dic[j] += vote[i]
         graph = pygal.Bar()
-        graph.title = "ผล Vote รวมของหนังแต่ละประเภท (2006-2016)"
+        graph.title = "ผล Vote รวมของภาพยนตร์แต่ละประเภท (2006-2016)"
 
         for i in sorted(dic, key = lambda x: dic[x], reverse=True):
             graph.add(i, dic[i])
         graph.render_to_file("../Graph/vote.svg")
         graph.render_to_file("../docs/assets/images/vote.svg")
+
+        for i in range(2006, 2017):
+            dic = {}
+            for j in range(len(genre)):
+                if year[j] == i:
+                    for gen in genre[j].split(","):
+                        if gen not in dic:
+                            dic[gen] = vote[j]
+                        else:
+                            dic[gen] += vote[j]
+            graph = pygal.Bar()
+            graph.title = "ผลโหวตของภาพยนตร์ปี %d" %i
+            for item in sorted(dic, key=lambda x:dic[x], reverse=True):
+                graph.add(item, dic[item])
+            graph.render_to_file("../Graph/vote%d.svg" %i)
+            graph.render_to_file("../docs/assets/images/vote%d.svg" %i)
     def rating(data):
         rating = data["Rating"].tolist()
         genre = data["Genre"].tolist()
@@ -184,7 +201,7 @@ class project:
                 else:
                     dic[j] += [rating[i]]
         graph = pygal.Bar()
-        graph.title = "Rating เฉลี่ยของหนังแต่ละประเภทรวมทุกปี (2006-2016)"
+        graph.title = "Rating เฉลี่ยของภาพยนตร์แต่ละประเภทรวมทุกปี (2006-2016)"
         graph_dic = {}
         for i in dic:
             graph_dic[i] = np.mean(dic[i])
@@ -236,7 +253,7 @@ class project:
             else:
                 dic[i] = 1
         graph = pygal.Bar()
-        graph.title = "ผู้กํากับที่กํากับหนังยอดนิยมทั้งหมดตั้งแต่ปี 2006 - 2016"
+        graph.title = "ผู้กํากับที่กํากับภาพยนตร์ยอดนิยมทั้งหมดตั้งแต่ปี 2006 - 2016"
         count = 0
         for i in sorted(dic, key = lambda x: dic[x], reverse=True):
             graph.add(i, dic[i])
