@@ -1,6 +1,11 @@
 /* Font import */
 @import url('https://fonts.googleapis.com/css?family=Athiti:200,300,400,500,600,700&subset=thai');
 
+*{
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: 'Athiti', sans-serif;
 }
