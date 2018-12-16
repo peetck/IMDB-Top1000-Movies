@@ -6,9 +6,9 @@ import os
 import pandas as pd
 from wordcloud import WordCloud
 import pygal
-
 #
 class project:
+    """ project class """
     def genre_2006_2016(data):
         genre = data["Genre"].tolist()
         years = data["Year"].tolist()
@@ -30,6 +30,7 @@ class project:
                 graph.add(i, dic[i])
             graph.render_to_file("../Graph/%d.svg" %ye)
             graph.render_to_file("../docs/assets/images/%d.svg" %ye)
+###############################################################################################################################
     def genre_graph(data):
         genre = data["Genre"].tolist()
         genre_2 = []
@@ -53,6 +54,7 @@ class project:
             graph.add(dic2[i], i)
         graph.render_to_file("../Graph/genre_graph.svg")
         graph.render_to_file("../docs/assets/images/genre_graph.svg")
+###############################################################################################################################
     def genre_price(data):
         genre = data["Genre"].tolist()
         revenue = data["Revenue (Millions)"].tolist()
@@ -112,10 +114,6 @@ class project:
             graph.add(i, all_dic[i])
         graph.render_to_file("../Graph/genre_price_all.svg")
         graph.render_to_file("../docs/assets/images/genre_price_all.svg")
-
-
-
-
         graph = pygal.Line()
         graph.title = "รายได้จากการขายภาพยนตร์แต่ละประเภทในแต่ละปี (US-Dollars Millions)"
         graph.x_labels = map(str, range(2006, 2017))
@@ -125,8 +123,6 @@ class project:
             , dic_2013["%s" %i], dic_2014["%s" %i], dic_2015["%s" %i], dic_2016["%s" %i]])
         graph.render_to_file("../Graph/genre_price_each_years.svg")
         graph.render_to_file("../docs/assets/images/genre_price_each_years.svg")
-
-
         listed_each = [dic_2006, dic_2007, dic_2008, dic_2009, dic_2010 , dic_2011, dic_2012, dic_2013, dic_2014, dic_2015, dic_2016]
         count = 0
         for i in range(2006, 2017):
@@ -137,6 +133,7 @@ class project:
                 graph.render_to_file("../Graph/price%d.svg" %i)
                 graph.render_to_file("../docs/assets/images/price%d.svg" %i)
             count += 1
+###############################################################################################################################
     def runtime(data):
         runtime = data["Runtime (Minutes)"].tolist()
         genre = data["Genre"].tolist()
@@ -156,6 +153,7 @@ class project:
             graph.add(i, graph_dic[i])
         graph.render_to_file("../Graph/runtime.svg")
         graph.render_to_file("../docs/assets/images/runtime.svg")
+###############################################################################################################################
     def vote(data):
         vote = data["Votes"].tolist()
         genre = data["Genre"].tolist()
@@ -174,7 +172,6 @@ class project:
             graph.add(i, dic[i])
         graph.render_to_file("../Graph/vote.svg")
         graph.render_to_file("../docs/assets/images/vote.svg")
-
         for i in range(2006, 2017):
             dic = {}
             for j in range(len(genre)):
@@ -190,6 +187,7 @@ class project:
                 graph.add(item, dic[item])
             graph.render_to_file("../Graph/vote%d.svg" %i)
             graph.render_to_file("../docs/assets/images/vote%d.svg" %i)
+###############################################################################################################################
     def rating(data):
         rating = data["Rating"].tolist()
         genre = data["Genre"].tolist()
@@ -209,6 +207,7 @@ class project:
             graph.add(i, graph_dic[i])
         graph.render_to_file("../Graph/rating.svg")
         graph.render_to_file("../docs/assets/images/rating.svg")
+###############################################################################################################################
     def word(data):
         description = data["Description"].tolist()
         text = ""
@@ -229,7 +228,6 @@ class project:
                 text_more50 += description[i]
             else:
                 text_less50 += description[i]
-
         popcorn = np.array(Image.open(path.join("../Picture/popcorn.png")))
         wordcloud = WordCloud(max_font_size=60, mask=popcorn,background_color="white").generate(text_more50)
         plt.figure()
@@ -244,6 +242,7 @@ class project:
         plt.axis("off")
         wordcloud.to_file("../Wordcloud/less50.png")
         wordcloud.to_file("../docs/assets/images/less50.png")
+###############################################################################################################################
     def director(data):
         dic = {}
         direct = data["Director"].tolist()
