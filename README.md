@@ -4,9 +4,7 @@
 
 * โปรเจคนี้เกี่ยวกับการทํา Data Analysis พวกเราเลือก IMDB Top 1000 Films (2006-2016) สําหรับโปรเจคนี้
 
-* เราทำการวิจัย หนัง 1000 เรื่อง จาก IMDB ตั้งแต่ปี 2006-2016 (1000 เรื่อง)
-
-* เรานำหนัง ทั้ง 1000 เรื่องมาวิเคราะห์ ความนิยมของหนังประเภทต่างๆ, รายได้ของหนังแต่ละประเภทในแต่ละปี และนำมาวิเคราะห์ความเปลี่ยนแปลงในแต่ละปี
+* เรานำภาพยนตร์ 1000 เรื่องที่ได้มาจากการจัดอันดับหนังยอดนิยมของเว็บ IMDB เรื่องมาวิเคราะห์
 
 * เราอยากรู้ว่า คําภาษาอังกฤษคําไหนที่ถูกใช้มากที่สุดในเรื่องย่อของหนัง ตั้งแต่ปี 2006-2016 (1000 เรื่อง)
 
@@ -20,7 +18,8 @@
 
 * โดยใช้ข้อมูลจาก : https://www.kaggle.com/PromptCloudHQ/imdb-data/data ข้อมูลมีขนาด 302.51 KB
 
-* ผลลัพธ์ดูได้ที่ เว็บไซต์ : https://peetck.github.io/IMDB-Top1000-Movies/
+* ผลลัพธ์ดูได้ที่ เว็บไซต์ : https://peetck.github.io/IMDB-Top1000-Movies/ หรือ https://www.youtube.com/watch?v=bTSjrqIYCpA
+           
 ## Group Members
  |<img src="docs/assets/team/01.jpg" width="120px" height="120px">|<img src="docs/assets/team/04.jpg" width="120px" height="120px">|<img src="docs/assets/team/03.jpg" width="120px" height="120px">|<img src="docs/assets/team/02.jpg" width="120px" height="120px">|
 |:---:|:---:|:---:|:---:|
